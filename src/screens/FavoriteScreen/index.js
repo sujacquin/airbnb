@@ -18,7 +18,7 @@ class FavoriteScreen extends React.Component {
         userId = await AsyncStorage.getItem("userId")
         userToken = await AsyncStorage.getItem("userToken")
         const response = await axios.get(`https://airbnb-api.now.sh/api/user/${userId}`, { headers: { authorization: "Bearer " + userToken } })
-        console.log(response.data.account.favorites);
+
         await this.setState({ favorites: response.data.account.favorites, isLoading: false })
     }
 

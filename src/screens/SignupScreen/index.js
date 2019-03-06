@@ -36,7 +36,6 @@ class SignupScreen extends React.Component {
         const token = await AsyncStorage.getItem("userToken");
         const id = await AsyncStorage.getItem("userId")
 
-        console.log(response.data)
         this.props.navigation.navigate("Home", { userId: id, userToken: token });
     }
 

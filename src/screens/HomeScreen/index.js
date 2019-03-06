@@ -23,7 +23,7 @@ class HomeScreen extends React.Component {
     async componentDidMount() {
         const response = await axios.get("https://airbnb-api.now.sh/api/room?city=paris");
         await this.setState({ rooms: response.data.rooms, isLoading: false })
-        console.log(this.state)
+
 
     }
     showRoom = (roomId) => {
@@ -33,7 +33,7 @@ class HomeScreen extends React.Component {
 
 
     render() {
-        console.log(this.props.navigation.state)
+
 
         if (!this.state.mapView) {
             return (<>

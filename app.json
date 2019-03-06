@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AirBnb",
-    "slug": "MyApp",
+    "slug": "susana-airbnb",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Replica of old airbnb using react-native",
+    "githubUrl": "https://github.com/sujacquin/airbnb"
   }
 }

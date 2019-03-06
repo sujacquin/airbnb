@@ -37,7 +37,7 @@ class ProfileScreen extends React.Component {
         userId = await AsyncStorage.getItem("userId")
         userToken = await AsyncStorage.getItem("userToken")
         const response = await axios.get(`https://airbnb-api.now.sh/api/user/${userId}`, { headers: { authorization: "Bearer " + userToken } })
-        console.log(response.data);
+
         await this.setState({ profile: response.data, isLoading: false })
     }
     render() {

@@ -33,7 +33,6 @@ class LoginScreen extends React.Component {
         const token = await AsyncStorage.getItem("userToken");
         const id = await AsyncStorage.getItem("userId")
 
-        console.log(response.data)
         const { status } = await Permissions.askAsync(Permissions.LOCATION);
         if (status !== "granted") {
             this.setState({
